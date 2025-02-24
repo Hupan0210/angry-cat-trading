@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>策略管理</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="adminContent" style="display: none;">
+        <header>
+            <h1>策略管理</h1>
+            <a href="index.html">返回首页</a>
+        </header>
+
+        <main>
+            <section class="strategy-form">
+                <h2>添加新策略</h2>
+                <form id="strategyForm">
+                    <label>标题: <input type="text" name="title" required></label><br>
+                    <label>日期: <input type="text" name="date" value="2025-02-24 22:03" readonly></label><br>
+                    <label>币种: 
+                        <select name="coin">
+                            <option value="BTC">BTC</option>
+                            <option value="ETH">ETH</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </label><br>
+                    <label>交易类型: 
+                        <select name="type">
+                            <option value="短线单">短线单</option>
+                            <option value="长线单">长线单</option>
+                        </select>
+                    </label><br>
+                    <label>入场位: <input type="text" name="entry" placeholder="例: 50000-51000"></label><br>
+                    <label>补仓位: <input type="text" name="addPosition"></label><br>
+                    <label>止损: <input type="text" name="stopLoss"></label><br>
+                    <label>仓位 (%): <input type="number" name="position" max="100"></label><br>
+                    <label>方向: 
+                        <select name="direction">
+                            <option value="做多">做多</option>
+                            <option value="做空">做空</option>
+                        </select>
+                    </label><br>
+                    <label>杠杆: <input type="number" name="leverage" value="100"></label><br>
+                    <label>止盈位: <input type="text" name="takeProfit"></label><br>
+                    <button type="submit">添加策略</button>
+                </form>
+            </section>
+
+            <section class="strategy-list" id="adminStrategyList">
+                <!-- 动态生成策略内容 -->
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const correctPassword = "112583";
+            const inputPassword = prompt("请输入后台管理密码：");
+            if (inputPassword === correctPassword) {
+                document.getElementById("adminContent").style.display = "block";
+            } else {
+                alert("密码错误，无法访问后台！");
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>

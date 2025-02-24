@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f0f2f5;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+button {
+    padding: 8px 15px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #1557b0;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.search {
+    margin: 30px 0;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #1a73e8;
+}
+
+.strategy-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.strategy-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.strategy-card h2 {
+    margin: 0 0 10px;
+    color: #1a73e8;
+    font-size: 1.5em;
+}
+
+.strategy-card p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.admin-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-link:hover {
+    text-decoration: underline;
+}
+
+.strategy-form {
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

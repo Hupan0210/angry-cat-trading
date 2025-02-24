@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生气猫交易策略分享网</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 data-lang="title">生气猫交易策略分享网</h1>
+        <div class="lang-switch">
+            <button onclick="switchLang('zh')">中文</button>
+            <button onclick="switchLang('en')">English</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="search">
+            <input type="text" id="searchInput" placeholder="搜索策略（币种/类型）" data-lang-placeholder="searchPlaceholder">
+            <button onclick="searchStrategies()">搜索</button>
+        </section>
+
+        <section class="strategy-list" id="strategyList">
+            <!-- 动态生成最新两条策略 -->
+        </section>
+
+        <a href="admin.html" class="admin-link">管理策略（仅限站长）</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
